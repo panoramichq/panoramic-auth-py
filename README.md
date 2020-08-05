@@ -1,14 +1,10 @@
 # Panoramic Auth SDK
 
-.. image:: https://travis-ci.org/panoramichq/panoramic-auth-py.svg?branch=master
-  :target: https://travis-ci.org/panoramichq/panoramic-auth-py
-  :alt: Travis
-.. image:: https://img.shields.io/pypi/pyversions/panoramic-auth.svg
-  :target: https://pypi.org/project/panoramic-auth/
-  :alt: Download from PyPI
-.. image:: https://img.shields.io/pypi/l/panoramic-auth.svg
-  :target: https://pypi.org/project/panoramic-auth/
-  :alt: License
+[![Build Status](https://travis-ci.org/panoramichq/panoramic-auth-py.svg?branch=master)](https://travis-ci.org/panoramichq/panoramic-auth-py)
+![Last Commit](https://img.shields.io/github/last-commit/panoramichq/panoramic-auth-py)
+![Latest Release](https://img.shields.io/github/v/release/panoramichq/panoramic-auth-py)
+![License](https://img.shields.io/pypi/l/panoramic-auth.svg)
+[![PyPI Download](https://img.shields.io/pypi/pyversions/panoramic-auth.svg)](https://pypi.org/project/panoramic-auth/)
 
 ## Getting Started
 
