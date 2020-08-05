@@ -1,0 +1,36 @@
+language: python
+python: 3.7
+dist: xenial
+cache: pip
+matrix:
+  include:
+  - python: 3.5
+    env: TOXENV=py35
+  - python: 3.6
+    env: TOXENV=py36
+  - python: 3.7
+    env: TOXENV=py37
+  - python: 3.7
+    env: TOXENV=bandit
+  - python: pypy3.5
+    env: TOXENV=pypy3
+install:
+- pip install -U setuptools
+- pip install tox
+script: tox
+deploy:
+  - provider: pypi
+    user: __token__
+    password:
+      secure: "J2A+pL0NeQQLbisa+Pz/5E3Go5ipHk5oY0ZDGgFQ9shJr3siuqtsAC2C62NQwqvuox2fQNyyMVXcAUHd9nL4+fyFwqi+UCmmUMQTZIz+2853VJOt6MY5U+Np7RpWMu/gi2mT7ngL9pr5pQbf7/kM/OPymSyHjkq8TXbA/cXcYUJk8LZnpefs09gD1kYlqUhtky2t/jt4P2ONVnFOaKYYb/jrhwxmsZNm6dGgKi4Pllo4Z+6hyPnJ6KYlJFzu5YTRrQBiRBo6Z/eOP6P2jb9WF6hGEC8YrxoqatmDGIrogxRhwg/tbCXwq8Qk0gBsg7M0QOFc3YKNnxgKU2/bGrZc/N7eiUH6HMY+EdTAQjcn27EEqcsfa/zAEzDDCUO+9EEPb0++8bgIq3cVZDNwx3U0VswWrVzyZ2w8Ddhi1/gczQI9ucjuTMU+qVQ4nZDlgjzJtBzv81X/wpQYTEKyETlz0fKNWrpBPXVflhSSnZFlmgJALKyd9Fnoy5suS/Pd+PrB79kkMRyu6kL3ml/vaqnQmwXJJcsItgl4vfpDISf2ihxn5kvXxVXKbocYerj2/FL8eaI2rbisNiqO+XQ2Eg+DlMPr7FqH+/1CJvC42Dp1NgoUIx4i1EEn9TnPO+7ijKbdPNSnK7tKVwZD6EYrMzUPwiXB7N0BkAGAEB+jZ4iEli0="
+    distributions: sdist bdist_wheel
+    on:
+      tags: true
+      repo: panoramichq/panoramic-auth-py
+  - provider: releases
+    api_key:
+      secure: "VAcEzOeWvEmeOKs4K0im6eKs0YVzT+YLRn8u++YMN7Y+i1HjM6sGBKt8tLmXlKKJI6fjO2SKUm0I19/3DPUIztQfhri43HEfxu2dZ3O752hl5ryA5M/vnB7CdkiB8H7ukmDcUOSHoQAVvy8r2cdw1M7LbzFcH/CFNNPnQUNUBFxKiSUGw7bkSGbZA+5StSL+kb4qwZ53otBLEqV/kLBTuTRW9JHeMiLxkwp7nofTPgF8G7cF68RzMikAtVWivSLAmxUUSznfmtNwW9QVm0n6vLTuYk6Ya83MffcF63tnqnQ2FHGIL1h7W8XsaP/QonsDVthI9Klv/eSlW1IiNvpAk8KgEd1RSpIGE1wORDNMoLKJWaFuEYH75nyyY87NlgE6szcnje0pauNyWr633wlhk8I9+pX/uTQcPxFH62qckMqeLDIrshS/oCVbHx/X9HUllAGLhaf4u6kgvZ+a5fZ+UnfBcH6pPvN2CxfbNErILHuAMOXb5/ZtBxKYRIwosy3uArNdO0tUHRn8h2myLADeYISYPnnk3HJNbaN4rWRMLfRFzubwk8qkye3T62CPOIteP3XJX9hDFBeAuEz97yFNQB8MzxSNQv/B/zP7SMAshUO7t8LLzfOXVZnvJtDtT+/rAI7U+gQiUjmF73lrXvkuaAjqvolNe8i885VZCzOX+oo="
+    skip_cleanup: true
+    on:
+      tags: true
+      repo: panoramichq/panoramic-auth-py
