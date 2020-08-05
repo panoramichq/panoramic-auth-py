@@ -1,5 +1,15 @@
 # Panoramic Auth SDK
 
+.. image:: https://travis-ci.org/panoramichq/panoramic-auth-py.svg?branch=master
+  :target: https://travis-ci.org/panoramichq/panoramic-auth-py
+  :alt: Travis
+.. image:: https://img.shields.io/pypi/pyversions/panoramic-auth.svg
+  :target: https://pypi.org/project/panoramic-auth/
+  :alt: Download from PyPI
+.. image:: https://img.shields.io/pypi/l/panoramic-auth.svg
+  :target: https://pypi.org/project/panoramic-auth/
+  :alt: License
+
 ## Getting Started
 
 This SDK handles the access token generation using client_credentials flow against Panoramic. To install the SDK in your app, add it to your requirements.txt:
