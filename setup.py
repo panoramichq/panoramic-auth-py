@@ -40,6 +40,6 @@ setup(
         "Topic :: Software Development :: Libraries :: Python Modules",
     ],
     install_requires=['requests_oauthlib>=1.3.0'],
-    extras_require={"tests": TEST_REQUIRES, "dev": TEST_REQUIRES + ["pre-commit>=2.1.1"]},
+    extras_require={"tests": TEST_REQUIRES, "dev": TEST_REQUIRES + ["pre-commit>=2.1.1", "mypy>=0.790"]},
     include_package_data=True,
 )
